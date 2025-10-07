@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Saiko Scripts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="gradient-bg"></div>
+
+  <header class="navbar">
+    <div class="brand">
+      <div class="logo">
+        <img src="https://i.pinimg.com/736x/42/4a/1a/424a1a336900ca143b39ab59dd89f591.jpg" alt="Saiko logo">
+      </div>
+      <div style="margin-left:6px;">
+        <div style="font-weight:700;">Saiko Site</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.65)">By Saiko Scripts</div>
+      </div>
+    </div>
+
+    <a class="download-btn" href="#" onclick="alert('Use the Executors tab to download files.')" aria-label="Download">Download</a>
+  </header>
+
+  <nav class="tabs-container" role="tablist" aria-label="Main tabs">
+    <div class="tab active" data-target="home" role="tab" aria-selected="true">
+      <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="home icon">
+      <div class="label">Home</div>
+    </div>
+
+    <div class="tab" data-target="scripts" role="tab">
+      <img src="https://cdn-icons-png.flaticon.com/512/136/136524.png" alt="scripts icon">
+      <div class="label">My scripts</div>
+    </div>
+
+    <div class="tab" data-target="executors" role="tab">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828805.png" alt="executors icon">
+      <div class="label">Executors</div>
+    </div>
+  </nav>
+
+  <main class="main-wrap">
+    <section id="home" class="tab-panel" role="tabpanel">
+      <div class="hero">
+        <h1>Bem-vindo — Saiko Scripts</h1>
+        <p>My site for scripts and executors, enjoy.</p>
+
+        <div class="code-window" aria-hidden="false" style="margin-top:18px;">
+          <div class="window-header">
+            <div class="dots"><div class="circle red"></div><div class="circle yellow"></div><div class="circle green"></div></div>
+            <div style="margin-left:auto;font-size:13px;color:rgba(255,255,255,0.6)">Nothing here.</div>
+          </div>
+          <pre class="code-block">
+Print("Saiko")
+          </pre>
+        </div>
+      </div>
+    </section>
+
+    <section id="scripts" class="tab-panel" role="tabpanel" hidden>
+      <h2 style="font-size:24px;margin-bottom:10px;">My scripts</h2>
+      <p style="color:rgba(255,255,255,0.8);margin-bottom:12px;">Aqui ficarão vários scripts. A lista é rolável e cada script tem um título grande acima do bloco de código.</p>
+
+      <div class="scripts-list" id="scriptsList">
+        <article class="script-card">
+          <div class="script-title">Chat bypass (PATCHED)</div>
+          <div class="script-desc">Patched, so not FE.</div>
+          <div class="code-window">
+            <div class="window-header">
+              <div class="dots"><div class="circle red"></div><div class="circle yellow"></div><div class="circle green"></div></div>
+            </div>
+            <pre class="code-block">
+Patched.
+            </pre>
+          </div>
+        </article>
+
+        <article class="script-card">
+          <div class="script-title">Vape Voidware</div>
+          <div class="script-desc">Vape Voidware. Supports Ink Game, 99 nights in the forest and Forsaken.</div>
+          <div class="code-window">
+            <div class="window-header">
+              <div class="dots"><div class="circle red"></div><div class="circle yellow"></div><div class="circle green"></div></div>
+            </div>
+            <pre class="code-block">
+loadstring(game:HttpGet("https://raw.githubusercontent.com/VapeVoidware/VW-Add/main/loader.lua", true))()
+            </pre>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="executors" class="tab-panel" role="tabpanel" hidden>
+      <div class="executors-wrap">
+        <div class="executor-card" role="region" aria-label="Executors download area">
+          <h2>Executors</h2>
+          <p class="lead">100% Free malware Xeno Executor</p>
+
+          <div>
+            <!-- DATA-FILE-URL: altere aqui para a URL pública do arquivo hospedado -->
+            <button id="downloadExecBtn" class="center-btn"
+              data-file-url="https://github.com/mikhaza155/Xeno-v1.2.70/blob/main/Xeno-v1.2.70.zip"
+              title="Clique para baixar o executor (se hospedado)">
+              Download Executor
+            </button>
+
+            <div class="small">Dont change the file, just click in downlaod and enjoy.</div>
+
+            <div class="file-controls">
+              <label class="choose-file-label">Choose file
+                <input id="localFileInput" type="file" style="display:none" />
+              </label>
+
+              <div id="selectedFileName" style="color:rgba(255,255,255,0.8)"></div>
+
+              <button id="clearFileBtn" class="clear-btn">Clear</button>
+            </div>
+
+            <div style="margin-top:12px;color:rgba(255,255,255,0.65);font-size:13px;">
+               
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Saiko Scripts. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
